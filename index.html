@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Spine Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Shelf Scan: Automated Book Spine Recognition and Cataloging</h1>
+
+        <p>This system uses OpenCV for detecting and cataloging book spines. It features vertical line detection and OCR
+            techniques to extract book titles accurately. Please note that this is a raw image processing algorithm, not
+            a machine learning method. As a result, the accuracy may vary, and sometimes the results may not be perfect.
+            For better results, ensure that only one rack of books is included in the image and crop the bookshelf
+            accordingly.</p>
+
+        <h3>Project Details</h3>
+        <p>Developed by: <strong>Sakthi Avinash</strong><br>
+            Student at Vellore Institute of Technology, Chennai</p>
+
+        <p>In this website, I share my journey of developing a test model that uses a peak-driven method to detect book
+            spines. This method focuses on identifying the peaks of book spines, which is important for accurate text
+            extraction. Through my experiments, I explore how this model works and how it compares with traditional
+            methods like Canny contour edge detection. This new approach has the potential to improve book spine
+            detection in certain situations.</p>
+
+        <p>For more details, you can check the <a
+                href="https://www.linkedin.com/in/sakthiavinash/details/projects/1734449833576/single-media-viewer/?profileId=ACoAAD29CxIB6UgmoznintgYUjqoePp-U5Hflnc"
+                target="_blank">project documentation here</a>.</p>
+
+        <br><br>
+        <h3>Upload a Bookshelf Image for Processing</h3>
+        <input type="file" id="imageUpload" accept="image/*" onchange="previewImage(event)">
+        <br><br>
+        <img id="imagePreview" src="" alt="Image Preview" style="max-width: 100%; display:none;" />
+        <br><br>
+        <button id="processButton" onclick="processImage()" style="display:none;">Process Image</button>
+
+        <!-- Progress Bar and Status -->
+        <div id="progressContainer" style="display:none;">
+            <div id="progressBar" style="width: 0%;"></div>
+            <p id="progressText">Uploading Image...</p>
+        </div>
+
+        <div id="output" style="display:none;">
+            <h2>Processed Books</h2>
+            <div id="bookImages"></div>
+            <div id="ocrResults"></div>
+            <div id="googleBooksInfo"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

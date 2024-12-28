@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#progressContainer {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+#progressBar {
+    height: 30px;
+    width: 0%;
+    background-color: #4caf50;
+    border-radius: 5px;
+}
+
+#progressText {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#output {
+    margin-top: 20px;
+}
+
+#bookImages img {
+    margin: 10px;
+    max-width: 30%;
+}
+
+#ocrResults p {
+    font-weight: bold;
+}
+
+#googleBooksInfo {
+    margin-top: 20px;
+}
